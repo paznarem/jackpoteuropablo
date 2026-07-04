@@ -1,0 +1,416 @@
+[
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-01",
+    "draw_day": "miércoles",
+    "numbers": [
+      6,
+      10,
+      24,
+      35,
+      41,
+      43
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-03",
+    "draw_day": "viernes",
+    "numbers": [
+      7,
+      8,
+      32,
+      46,
+      49
+    ],
+    "euros": [
+      6,
+      9,
+      11
+    ],
+    "combos": [
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        9,
+        11
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-04",
+    "draw_day": "sábado",
+    "numbers": [
+      4,
+      12,
+      29,
+      35,
+      46,
+      47
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-07",
+    "draw_day": "martes",
+    "numbers": [
+      11,
+      17,
+      29,
+      43,
+      46
+    ],
+    "euros": [
+      3,
+      8,
+      12
+    ],
+    "combos": [
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        8,
+        12
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-08",
+    "draw_day": "miércoles",
+    "numbers": [
+      15,
+      22,
+      28,
+      32,
+      46,
+      49
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-10",
+    "draw_day": "viernes",
+    "numbers": [
+      3,
+      4,
+      7,
+      32,
+      50
+    ],
+    "euros": [
+      4,
+      6,
+      10
+    ],
+    "combos": [
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        6,
+        10
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-11",
+    "draw_day": "sábado",
+    "numbers": [
+      8,
+      12,
+      21,
+      35,
+      36,
+      44
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-14",
+    "draw_day": "martes",
+    "numbers": [
+      4,
+      16,
+      33,
+      42,
+      44
+    ],
+    "euros": [
+      5,
+      6,
+      11
+    ],
+    "combos": [
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        11
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-15",
+    "draw_day": "miércoles",
+    "numbers": [
+      10,
+      11,
+      32,
+      37,
+      39,
+      49
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-17",
+    "draw_day": "viernes",
+    "numbers": [
+      6,
+      20,
+      29,
+      32,
+      35
+    ],
+    "euros": [
+      1,
+      5,
+      12
+    ],
+    "combos": [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        5,
+        12
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-18",
+    "draw_day": "sábado",
+    "numbers": [
+      1,
+      11,
+      34,
+      43,
+      48,
+      49
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-21",
+    "draw_day": "martes",
+    "numbers": [
+      6,
+      11,
+      31,
+      38,
+      41
+    ],
+    "euros": [
+      1,
+      2,
+      6
+    ],
+    "combos": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-22",
+    "draw_day": "miércoles",
+    "numbers": [
+      13,
+      14,
+      28,
+      38,
+      41,
+      43
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-24",
+    "draw_day": "viernes",
+    "numbers": [
+      16,
+      21,
+      25,
+      32,
+      47
+    ],
+    "euros": [
+      4,
+      10,
+      11
+    ],
+    "combos": [
+      [
+        4,
+        10
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-25",
+    "draw_day": "sábado",
+    "numbers": [
+      7,
+      11,
+      12,
+      38,
+      41,
+      44
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-28",
+    "draw_day": "martes",
+    "numbers": [
+      6,
+      19,
+      45,
+      47,
+      48
+    ],
+    "euros": [
+      2,
+      3,
+      8
+    ],
+    "combos": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "lotto6aus49",
+    "draw_date": "2026-07-29",
+    "draw_day": "miércoles",
+    "numbers": [
+      2,
+      29,
+      34,
+      38,
+      45,
+      49
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-07-31",
+    "draw_day": "viernes",
+    "numbers": [
+      13,
+      32,
+      34,
+      36,
+      43
+    ],
+    "euros": [
+      4,
+      7,
+      10
+    ],
+    "combos": [
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        7,
+        10
+      ]
+    ],
+    "generated_at": "2026-07-01T08:00:00"
+  }
+]

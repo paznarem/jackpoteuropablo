@@ -1,0 +1,43 @@
+{
+  "eurojackpot": {
+    "system": "5+3E",
+    "combos_per_ticket": 3,
+    "cost_per_draw": 6.60,
+    "cost_weekly": 13.20,
+    "draws_per_week": 2,
+    "filters": {
+      "decades_min": 3,
+      "decades_max": 4,
+      "even_min": 1,
+      "even_max": 4,
+      "sum_min": 80,
+      "sum_max": 179,
+      "max_consecutive_pairs": 1,
+      "max_birthday_range_numbers": 3
+    }
+  },
+  "lotto6aus49": {
+    "system": "normal",
+    "combos_per_ticket": 1,
+    "cost_per_draw": 1.80,
+    "draws_per_week": 1,
+    "filters_6aus49": {
+      "decades_min": 4,
+      "even_min": 2,
+      "even_max": 4,
+      "sum_min": 120,
+      "sum_max": 200,
+      "max_consecutive_pairs": 1,
+      "max_birthday_range_numbers": 3
+    }
+  },
+  "popularity_penalties": {
+    "main_1_to_31": 0.85,
+    "main_7_specific": 0.70,
+    "main_13_specific": 1.10,
+    "main_32_to_50": 1.15,
+    "euro_7_specific": 0.80
+  },
+  "review_milestones": [25, 50, 75, 100],
+  "alert_no_prize_streak": 15
+}
