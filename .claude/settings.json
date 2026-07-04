@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /workspaces/jackpoteuropablo/.claude/auto-push.sh",
+            "statusMessage": "Subiendo cambios al repositorio...",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
