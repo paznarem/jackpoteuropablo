@@ -64,32 +64,40 @@
     "draw_date": "2026-07-07",
     "draw_day": "martes",
     "numbers": [
-      11,
-      17,
-      29,
-      43,
-      46
+      5,
+      13,
+      23,
+      46,
+      50
     ],
     "euros": [
       3,
-      8,
-      12
+      4,
+      10
     ],
     "combos": [
       [
         3,
-        8
+        4
       ],
       [
         3,
-        12
+        10
       ],
       [
-        8,
-        12
+        4,
+        10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   },
   {
     "game": "lotto6aus49",
@@ -110,32 +118,40 @@
     "draw_date": "2026-07-10",
     "draw_day": "viernes",
     "numbers": [
-      3,
-      4,
-      7,
-      32,
+      5,
+      13,
+      23,
+      46,
       50
     ],
     "euros": [
+      3,
       4,
-      6,
       10
     ],
     "combos": [
       [
-        4,
-        6
+        3,
+        4
       ],
       [
-        4,
+        3,
         10
       ],
       [
-        6,
+        4,
         10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   },
   {
     "game": "lotto6aus49",
@@ -156,32 +172,40 @@
     "draw_date": "2026-07-14",
     "draw_day": "martes",
     "numbers": [
-      4,
-      16,
-      33,
-      42,
-      44
+      5,
+      13,
+      23,
+      46,
+      50
     ],
     "euros": [
-      5,
-      6,
-      11
+      3,
+      4,
+      10
     ],
     "combos": [
       [
-        5,
-        6
+        3,
+        4
       ],
       [
-        5,
-        11
+        3,
+        10
       ],
       [
-        6,
-        11
+        4,
+        10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   },
   {
     "game": "lotto6aus49",
@@ -202,32 +226,40 @@
     "draw_date": "2026-07-17",
     "draw_day": "viernes",
     "numbers": [
-      6,
-      20,
-      29,
-      32,
-      35
+      5,
+      13,
+      23,
+      46,
+      50
     ],
     "euros": [
-      1,
-      5,
-      12
+      3,
+      4,
+      10
     ],
     "combos": [
       [
-        1,
-        5
+        3,
+        4
       ],
       [
-        1,
-        12
+        3,
+        10
       ],
       [
-        5,
-        12
+        4,
+        10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   },
   {
     "game": "lotto6aus49",
@@ -248,32 +280,40 @@
     "draw_date": "2026-07-21",
     "draw_day": "martes",
     "numbers": [
-      6,
-      11,
-      31,
-      38,
-      41
+      5,
+      13,
+      23,
+      46,
+      50
     ],
     "euros": [
-      1,
-      2,
-      6
+      3,
+      4,
+      10
     ],
     "combos": [
       [
-        1,
-        2
+        3,
+        4
       ],
       [
-        1,
-        6
+        3,
+        10
       ],
       [
-        2,
-        6
+        4,
+        10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   },
   {
     "game": "lotto6aus49",
@@ -294,32 +334,40 @@
     "draw_date": "2026-07-24",
     "draw_day": "viernes",
     "numbers": [
-      16,
-      21,
-      25,
-      32,
-      47
+      5,
+      13,
+      23,
+      46,
+      50
     ],
     "euros": [
+      3,
       4,
-      10,
-      11
+      10
     ],
     "combos": [
       [
-        4,
+        3,
+        4
+      ],
+      [
+        3,
         10
       ],
       [
         4,
-        11
-      ],
-      [
-        10,
-        11
+        10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   },
   {
     "game": "lotto6aus49",
@@ -340,32 +388,40 @@
     "draw_date": "2026-07-28",
     "draw_day": "martes",
     "numbers": [
-      6,
-      19,
-      45,
-      47,
-      48
+      5,
+      13,
+      23,
+      46,
+      50
     ],
     "euros": [
-      2,
       3,
-      8
+      4,
+      10
     ],
     "combos": [
       [
-        2,
-        3
-      ],
-      [
-        2,
-        8
+        3,
+        4
       ],
       [
         3,
-        8
+        10
+      ],
+      [
+        4,
+        10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   },
   {
     "game": "lotto6aus49",
@@ -386,31 +442,119 @@
     "draw_date": "2026-07-31",
     "draw_day": "viernes",
     "numbers": [
+      5,
       13,
-      32,
-      34,
-      36,
-      43
+      23,
+      46,
+      50
     ],
     "euros": [
+      3,
       4,
-      7,
       10
     ],
     "combos": [
       [
-        4,
-        7
+        3,
+        4
       ],
       [
-        4,
+        3,
         10
       ],
       [
-        7,
+        4,
         10
       ]
     ],
-    "generated_at": "2026-07-01T08:00:00"
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-08-04",
+    "draw_day": "martes",
+    "numbers": [
+      5,
+      13,
+      23,
+      46,
+      50
+    ],
+    "euros": [
+      3,
+      4,
+      10
+    ],
+    "combos": [
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        10
+      ]
+    ],
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
+  },
+  {
+    "game": "eurojackpot",
+    "draw_date": "2026-08-07",
+    "draw_day": "viernes",
+    "numbers": [
+      5,
+      13,
+      23,
+      46,
+      50
+    ],
+    "euros": [
+      3,
+      4,
+      10
+    ],
+    "combos": [
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        10
+      ]
+    ],
+    "generated_at": "2026-07-05T07:40:24",
+    "seed": 835185036,
+    "generator": "loteria.py v1.3",
+    "schein": {
+      "semanas": 5,
+      "sorteos": 10,
+      "precio_total": 61.0
+    },
+    "cost_per_draw": 6.1
   }
 ]

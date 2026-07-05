@@ -16,7 +16,7 @@ import json
 import math
 import random
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from itertools import combinations
 from pathlib import Path
 
@@ -233,28 +233,58 @@ def cmd_genera(args):
     if dia not in cfg[gkey]["draw_days"]:
         sys.exit(f"ERROR: {d.isoformat()} es {dia}; {gkey} se sortea {' y '.join(cfg[gkey]['draw_days'])}.")
     pending = load_json(PENDING_F)
-    if any(t["game"] == gkey and t["draw_date"] == d.isoformat() for t in pending):
-        sys.exit(f"ERROR: ya hay un ticket {gkey} pendiente para {d.isoformat()}. No se genera otro.")
+
+    # Schein multisemana: misma combinación para todos los sorteos de la Laufzeit
+    if args.semanas:
+        fechas = [d + timedelta(days=i) for i in range(7 * args.semanas)]
+        fechas = [x for x in fechas if DIAS[x.weekday()] in cfg[gkey]["draw_days"]]
+    else:
+        fechas = [d]
+    dups = [x.isoformat() for x in fechas
+            if any(t["game"] == gkey and t["draw_date"] == x.isoformat() for t in pending)]
+    if dups:
+        sys.exit(f"ERROR: ya hay ticket(s) {gkey} pendiente(s) para {', '.join(dups)}. No se genera nada.")
+    cost = None
+    if args.precio_total is not None:
+        precio = float(str(args.precio_total).replace(",", "."))
+        cost = precio / len(fechas)
 
     seed = args.seed if args.seed is not None else random.SystemRandom().randrange(1, 10**9)
     rng = random.Random(seed)
     t = gen_ticket(rng, gkey, cfg, freqs)
+    now = datetime.now().isoformat(timespec="seconds")
 
-    ticket = {"game": gkey, "draw_date": d.isoformat(), "draw_day": dia, "numbers": t["numbers"]}
-    if gkey == "eurojackpot":
-        ticket["euros"] = t["euros"]
-        ticket["combos"] = t["combos"]
-    ticket["generated_at"] = datetime.now().isoformat(timespec="seconds")
-    ticket["seed"] = seed
-    ticket["generator"] = VERSION
-    pending.append(ticket)
+    for x in fechas:
+        ticket = {"game": gkey, "draw_date": x.isoformat(), "draw_day": DIAS[x.weekday()],
+                  "numbers": t["numbers"]}
+        if gkey == "eurojackpot":
+            ticket["euros"] = t["euros"]
+            ticket["combos"] = t["combos"]
+        ticket["generated_at"] = now
+        ticket["seed"] = seed
+        ticket["generator"] = VERSION
+        if args.semanas:
+            ticket["schein"] = {"semanas": args.semanas, "sorteos": len(fechas)}
+            if args.precio_total is not None:
+                ticket["schein"]["precio_total"] = precio
+        if cost is not None:
+            ticket["cost_per_draw"] = round(cost, 4)
+        pending.append(ticket)
     pending.sort(key=lambda x: (x["draw_date"], x["game"]))
     save_json(PENDING_F, pending)
 
-    print(f"{gkey} — sorteo {d.isoformat()} ({dia})")
+    if args.semanas:
+        print(f"{gkey} — Schein de {args.semanas} semanas, {len(fechas)} sorteos "
+              f"({fechas[0].isoformat()} → {fechas[-1].isoformat()})")
+    else:
+        print(f"{gkey} — sorteo {d.isoformat()} ({dia})")
     print(f"  números: {'-'.join(map(str, t['numbers']))}")
     if gkey == "eurojackpot":
         print(f"  euros:   {'-'.join(map(str, t['euros']))}  (combos: {t['combos']})")
+    if args.semanas:
+        print("  sorteos: " + ", ".join(x.isoformat() for x in fechas))
+        if cost is not None:
+            print(f"  precio:  {precio:.2f}€ → {cost:.2f}€/sorteo")
     print(f"  semilla: {seed}  intentos: {t['attempts']}  → guardado en pending_tickets.json")
 
 
@@ -315,7 +345,7 @@ def cmd_resultado(args):
     if premio > 0 and best == "none":
         sys.exit("ERROR: --premio > 0 pero ninguna clase detectada; indica --clase (p. ej. Kl.9 con Superzahl).")
 
-    cost = cfg[gkey]["cost_per_draw"]
+    cost = ticket.get("cost_per_draw", cfg[gkey]["cost_per_draw"])
     if gkey == "eurojackpot":
         values = [ticket["draw_date"], gkey, ticket["draw_day"],
                   "-".join(map(str, ticket["numbers"])), row_e[0],
@@ -513,7 +543,9 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     g = sub.add_parser("genera", help="generar combinación y guardarla en pendientes")
     g.add_argument("juego", choices=["ej", "lotto"])
-    g.add_argument("--fecha", required=True, help="fecha del sorteo (ISO o D.M.YY)")
+    g.add_argument("--fecha", required=True, help="fecha del (primer) sorteo (ISO o D.M.YY)")
+    g.add_argument("--semanas", type=int, help="Laufzeit del Schein: misma combinación N semanas")
+    g.add_argument("--precio-total", dest="precio_total", help="precio del Schein completo (p.ej. 61)")
     g.add_argument("--seed", type=int, help="semilla RNG (reproducibilidad)")
     g.set_defaults(fn=cmd_genera)
     r = sub.add_parser("resultado", help="comprobar sorteo, mover pendiente a tracking")
