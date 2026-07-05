@@ -6,9 +6,9 @@
 Pablo juega en Sachsen Lotto (online) con cadencia **variable** (1 o 2 sorteos por semana de cada juego, él decide cada semana):
 
 1. **EuroJackpot**: martes y viernes, System 5Z+3E (3 combinaciones). Desde 2026-07-05 se juega con **Schein de 5 semanas** (10 sorteos, 61€ → 6,10€/sorteo): misma combinación durante el Schein, combinación nueva en cada renovación. Suelto costaría 6,60€/sorteo.
-2. **Lotto 6aus49**: miércoles y/o sábado, Normalschein 1 tipp (6 números, 1,80€/sorteo = 1,20€ + 0,60€ gebühr). Cadencia variable.
+2. **Lotto 6aus49**: Normalschein 1 tipp (6 números). Desde 2026-07-05 también en **Schein de 5 semanas** jugando miércoles Y sábado (10 sorteos, ~13€ → ~1,30€/sorteo; precio estimado por la estructura de tasas, pendiente de confirmar en la primera compra). Suelto costaría 1,80€/sorteo.
 
-**Gasto: ~12,20€/semana de EJ + 0–3,60€ de lotto (~700–820€/año).**
+**Gasto: ~14,80€/semana (~770€/año) con ambos Scheine renovándose cada 5 semanas.**
 
 Modelo para ambos juegos: **filtros estructurales + penalización por popularidad sobre base uniforme** (conscious selection). No hay predicción posible: el objetivo es maximizar el valor esperado evitando combinaciones que compartirían premio con mucha gente, no acertar más.
 
@@ -22,7 +22,8 @@ Pablo dice → Claude Code ejecuta:
 
 - **"genera EJ"** (o al agotarse el Schein vigente) → `python3 loteria.py genera ej --fecha <primer martes/viernes> --semanas 5 --precio-total 61`. Crea los 10 pendientes con la misma combinación y coste 6,10€/sorteo; Pablo compra el Schein con esos números
 - **"genera [martes|viernes]"** (sorteo suelto, excepcional) → `python3 loteria.py genera ej --fecha YYYY-MM-DD`
-- **"genera lotto [miércoles|sábado]"** → `python3 loteria.py genera lotto --fecha YYYY-MM-DD`
+- **"genera lotto"** (renovación del Schein) → `python3 loteria.py genera lotto --fecha <primer mié/sáb> --semanas 5 --precio-total <precio real>`
+- **"genera lotto [miércoles|sábado]"** (sorteo suelto, excepcional) → `python3 loteria.py genera lotto --fecha YYYY-MM-DD`
 - **"genera todo"** → ambos juegos para las fechas que indique
 - **"resultado EJ: N N N N N + E E"** → `python3 loteria.py resultado ej --numeros "N-N-N-N-N" --euros "E-E"`. Si hay varios EJ pendientes, añadir `--fecha` (acepta `25.5.26`). Si el script detecta premio, pide el importe REAL cobrado: preguntárselo a Pablo y repetir con `--premio X,XX` (para clases con Superzahl del lotto, añadir `--clase`)
 - **"resultado lotto: N N N N N N"** → `python3 loteria.py resultado lotto --numeros "N-N-N-N-N-N"`. La Superzahl no se modela (no la controla Pablo), pero si le dio premio se registra con `--premio` y `--clase`
@@ -161,7 +162,7 @@ integridad de datos, sesgo de uso de números del generador (vs baseline MC), pe
 ## Decisiones tomadas
 
 - **EuroJackpot** (decidido 2026-07-05): System 5Z+3E en **Schein de 5 semanas** (61€, 6,10€/sorteo, ahorro ~52€/año vs suelto). Combinación fija durante el Schein y nueva en cada renovación — estadísticamente idéntico a cambiarla cada sorteo, y más barato. Primer Schein: 2026-07-07 → 2026-08-07
-- **Lotto 6aus49**: Normalschein 1 tipp (1,80€/sorteo), 1–2×/semana a elección
+- **Lotto 6aus49** (decidido 2026-07-05): Normalschein 1 tipp en Schein de 5 semanas, mié+sáb (~13€/Schein estimado, confirmar precio real en la primera compra y corregir `cost_per_draw` de los pendientes si difiere). Primer Schein: 2026-07-08 → 2026-08-08
 - **Cadencia flexible**: no hay draws_per_week fijo; el gasto anual varía con lo que Pablo decida jugar
 - **Base uniforme + popularidad** (v1.3): la frecuencia histórica no predice y metía sesgos espurios
 - **Cambiar números entre sorteos NO mejora nada estadísticamente** (independencia de sorteos); se hace por preferencia, no por ventaja
@@ -186,3 +187,4 @@ integridad de datos, sesgo de uso de números del generador (vs baseline MC), pe
   - `genera --semanas N --precio-total X`: una combinación para toda la Laufzeit, pendientes individuales por sorteo con `cost_per_draw` real (6,10€); `resultado` usa el coste del ticket
   - Retirados los 8 pendientes EJ sueltos de julio (generados el 1.7 con el método antiguo, no comprados; recuperables en git). El EJ del 3.7 sigue pendiente de resultado
   - Primer Schein: 07.07–07.08.2026, semilla 835185036
+- **2026-07-05 v1.3.2**: Lotto también a Schein de 5 semanas (mié+sáb, 10 sorteos, ~13€ estimado → 1,30€/sorteo, confirmar al comprar). Retirados los 7 pendientes lotto sueltos futuros; primer Schein 08.07–08.08.2026, semilla 813161516
