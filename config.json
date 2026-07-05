@@ -1,17 +1,19 @@
 {
+  "_nota": "Fuente de verdad de parámetros. loteria.py la lee; el README solo la explica.",
+  "weighting": "uniform",
+  "_weighting_nota": "uniform = base igual para todos los números × popularity_penalties. La frecuencia histórica no predice nada y además arrastraba el sesgo de era de las eurozahlen 11/12 (solo existen desde 2022-03). 'frequency' reactiva el peso por frecuencia de frequencies.json.",
   "eurojackpot": {
     "system": "5+3E",
     "combos_per_ticket": 3,
     "cost_per_draw": 6.60,
-    "cost_weekly": 13.20,
-    "draws_per_week": 2,
+    "draw_days": ["martes", "viernes"],
     "filters": {
       "decades_min": 3,
       "decades_max": 4,
       "even_min": 1,
       "even_max": 4,
       "sum_min": 80,
-      "sum_max": 179,
+      "sum_max": 200,
       "max_consecutive_pairs": 1,
       "max_birthday_range_numbers": 3
     }
@@ -20,8 +22,8 @@
     "system": "normal",
     "combos_per_ticket": 1,
     "cost_per_draw": 1.80,
-    "draws_per_week": 1,
-    "filters_6aus49": {
+    "draw_days": ["miércoles", "sábado"],
+    "filters": {
       "decades_min": 4,
       "even_min": 2,
       "even_max": 4,
@@ -31,6 +33,7 @@
       "max_birthday_range_numbers": 3
     }
   },
+  "_cadencia_nota": "La cadencia semanal es variable (1-2 sorteos/semana por juego, Pablo decide). No hay draws_per_week fijo a propósito.",
   "popularity_penalties": {
     "main_1_to_31": 0.85,
     "main_7_specific": 0.70,
@@ -39,5 +42,9 @@
     "euro_7_specific": 0.80
   },
   "review_milestones": [25, 50, 75, 100],
-  "alert_no_prize_streak": 15
+  "alert_no_prize_streak": {
+    "eurojackpot": 58,
+    "lotto6aus49": 155
+  },
+  "_alert_nota": "Umbral = racha sin premio con probabilidad <5% bajo puro azar (P(premio)/sorteo: EJ system ~5,1%, lotto ~1,9%). El umbral 15 anterior saltaba con p=46% (EJ) / 75% (lotto): ruido."
 }
