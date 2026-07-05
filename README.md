@@ -124,6 +124,7 @@ Matiz importante: como las clases son pari-mutuel, la ventaja del modelo anti-po
 ## Costes y Bearbeitungsgebühr (verificado 2026-07-04 en sachsenlotto.de)
 
 - 1 sorteo por Spielauftrag: 0,60€ de tasa. **2 o más sorteos en el mismo Spielauftrag: 1,00€ fija en total.** Dauerspiel: 0,50€/mes por juego.
+- Precios reales del System 5Z+3E EJ (confirmados por Pablo 2026-07-05): individual 6,60€; 1 semana (2 sorteos) 13€; 2 semanas 25€; 3 semanas 37€; 4 semanas 49€; **5 semanas (10 sorteos) 61€ → 6,10€/sorteo**. Jugando 104 sorteos/año: 686€ (individual) vs ~634€ (Scheine de 5 semanas) → **ahorro ~52€/año solo en EJ**; el Dauerspiel (0,50€/mes) lo dejaría en ~630€.
 - Comprando sorteo a sorteo al ritmo 2+2/semana se pagan ~125€/año solo en tasas — comparable a TODO el retorno esperado (~146€).
 - Un Spielauftrag mensual por juego (misma combinación toda la Laufzeit) baja las tasas a ~24€/año (Dauerspiel: ~12€): **ahorro ~100€/año**.
 - Estadísticamente, repetir la misma combinación en varios sorteos es EXACTAMENTE igual de bueno que cambiarla (sorteos independientes, misma probabilidad y mismo EV cada vez; y la combinación del sistema sigue siendo anti-popular todo el mes). La única pega es psicológica: si una semana no juegas y "tus" números salen.
